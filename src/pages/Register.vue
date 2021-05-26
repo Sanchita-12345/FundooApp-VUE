@@ -2,7 +2,7 @@
     <div class="main">
         <form @submit.prevent="handleSubmit">
         <div class="head">
-        <img src="https://uspto.report/TM/88624243/mark" alt="" class="logo">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b5993922679119.56316a0ca4a90.png" alt="" class="logo">
         <h3>Create your FundooApp Account</h3>
       </div>
       <div class="name">
@@ -17,10 +17,7 @@
         <input type="username" v-model="username" required>
         <label>Username</label>
         
-        <!-- <span class="gmail">@gmail.com</span> -->
       </div>
-      <!-- <a class="line1">You can use letters, numbers & periods</a> -->
-      <!-- <a href="" class="line2">Use my current email address instead</a> -->
       <div class="pass">
             <input :type="password_type" class="password" v-model="password" id="pass1" required>
             <label>Password</label>
@@ -38,7 +35,7 @@
       <input type="submit"  value="Next" @click="submitForm">
         </form>
         <div class="side-image">
-      <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" class="side-logo">
+      <img src="https://play-lh.googleusercontent.com/Zz8kzLttXPqVL6IwQ_3Hq5mvDVCGSdeYmDxP-9v_1fLJ1b506bXJ-joHcbnRbp9z_1k=s200" alt="" class="side-logo">
     </div>
     </div>
 </template>
