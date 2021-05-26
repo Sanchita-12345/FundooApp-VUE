@@ -13,7 +13,7 @@ import
    
 
   <a href="http://localhost:8080/register">Create account</a>
-  <a href="http://localhost:8080/forgot">forgot password</a>
+  <a href="http://localhost:8080/forgot-password">forgot password</a>
 </div>
     
 
@@ -56,7 +56,7 @@ export default {
     font-family: roboto;
     font-weight: bold;
     color: #0e39c5;
-    font-size:30px;
+    font-size:35px;
   }
   img {
     display: block;
