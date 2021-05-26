@@ -37,8 +37,9 @@ form{
   background: #fff;
 }
 .logo{
-  width: 110px;
+  width: 132px;
   padding: 5px 0;
+  margin-left: -14px;
 }
 .head{
   padding-left: 10px;
