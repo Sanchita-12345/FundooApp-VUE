@@ -1,9 +1,9 @@
 import 
 <template>
 
-<div class="form">
+<div class="formx">
   <h3>Login</h3>
-  <img src="https://st2.depositphotos.com/5142301/7765/v/950/depositphotos_77650712-stock-illustration-f-letter-with-green-leaves.jpg"> 
+  <!-- <img src="https://st2.depositphotos.com/5142301/7765/v/950/depositphotos_77650712-stock-illustration-f-letter-with-green-leaves.jpg">  -->
                              
 <input type="email" name="email" placeholder="Email" />
    
@@ -66,15 +66,16 @@ export default {
     border-radius: 50%;
   }
   
-  .form {
+  .formx {
     background-color: #ffffff;
     width: 415px;
-    margin: 50px auto 10px auto;
+    margin: 111px auto 10px auto;
     padding: 30px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 10px -3px #333;
     text-align: center;
+    height: 366px;
   }
   
   input {
