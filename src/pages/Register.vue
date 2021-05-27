@@ -2,7 +2,15 @@
     <div class="main">
         <form @submit.prevent="handleSubmit">
         <div class="head">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b5993922679119.56316a0ca4a90.png" alt="" class="logo">
+          <p>
+            <span style='color: blue'>F</span>
+            <span style='color: red'>u</span>
+            <span style='color: yellow'>n</span>
+            <span style='color: blue'>d</span>
+            <span style='color: green'>o</span>
+            <span style='color: red'>o</span>
+          </p>
+        <!-- <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b5993922679119.56316a0ca4a90.png" alt="" class="logo"> -->
         <h3>Create your FundooApp Account</h3>
       </div>
       <div class="name">
@@ -35,7 +43,7 @@
       <input type="submit"  value="Next" @click="submitForm">
         </form>
         <div class="side-image">
-      <img src="https://play-lh.googleusercontent.com/Zz8kzLttXPqVL6IwQ_3Hq5mvDVCGSdeYmDxP-9v_1fLJ1b506bXJ-joHcbnRbp9z_1k=s200" alt="" class="side-logo">
+      <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" class="side-logo">
     </div>
     </div>
 </template>
