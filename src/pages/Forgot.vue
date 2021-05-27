@@ -1,13 +1,15 @@
 <template>
-    <div class="form">
-    <h3>Forgot Password</h3>
-                             
-    <input type="email" name="email" placeholder="Email" />
-   
-  <button>Submit</button>
-   
+    <div class="box">
+      <div class="inner-box">
+          <form @submit.prevent="handlesubmit">
+              <h3>Forgot Password</h3>
 
-</div>
+              <input type="email" v-model="email" placeholder="Email Address"/>
+              <button type="submit" class="btn btn-primary btn-block">submit</button>
+
+              </form>
+          </div>
+      </div>
 </template>
 
 <script>
@@ -25,6 +27,7 @@ export default {
                 email: this.email
             });
             console.log(response);
+            this.$router.push('/resetPassword/:resetToken')
         }
     }   
 }
@@ -45,36 +48,30 @@ export default {
     color: #0e39c5;
     font-size:35px;
   }
-  img {
-    display: block;
-    width: 80px;
-    margin: 30px auto;
-    /* box-shadow: 0 5px 10px -7px #333333; */
-    border-radius: 50%;
-  }
-  
-  .form {
-    background-color: #ffffff;
-    width: 415px;
-    margin: 185px auto 10px auto;
-    padding: 30px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px -3px #333;
+  .box{
+    width:400px;
+    height :300px;
+}
+.inner-box{
+    padding:20px;
+}
+.box h3{
     text-align: center;
-  }
-  
-  input {
+    margin:5px 0px;
+    color: #0e39c5;;
+}
+input[type="email"],button[type="submit"]{
+   
     border-radius: 100px;
     padding: 10px 15px;
     width: 77%;
+    height: 20%;
     border: 1px solid #D9D9D9;
     outline: none;
     display: block;
-    margin: 35px auto 20px auto;
-  }
-  
-  button {
+    margin: 30px auto 20px auto;;
+}
+button[type="submit"]{
     border-radius: 100px;
     border: none;
     background: #4971f6;
@@ -84,20 +81,18 @@ export default {
     margin-top: 25px;
     box-shadow: 0 2px 10px -3px #719BE6;
     display: block;
-    margin: 35px auto 10px auto;
-  }
-  
-  a {
-    text-align: center;
-    margin-top: 30px;
-    color: #4971f6;
-    text-decoration: none;
-    padding: 5px;
-    display: inline-block;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+    margin: 55px auto 10px auto;
+}
 
+form{
+  background-color: #ffffff;
+    width: 415px;
+    margin: 10px auto 10px auto;
+    padding: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px -3px #333;
+    text-align: center;
+    height: 300px;
+}
 </style>
