@@ -175,5 +175,8 @@ input[type="submit"]:hover{
 .side-logo{
   width: 230px;
 }
-
+p{
+  font-size: 30px;
+  font-family: roboto;
+}
 </style>
