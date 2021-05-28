@@ -2,12 +2,16 @@
     <form @submit.prevent="handleSubmit">
         <h3>Reset Password</h3>
 
+      <!-- <div class="form-group">
+            <input type="email" class="form-control form-control-lg" v-model="email" placeholder="email" required />
+        </div> -->
+
         <div class="form-group">
-            <input type="password" class="form-control form-control-lg" v-model="password" required />
+            <input type="password" class="form-control form-control-lg" v-model="password" placeholder="password" required />
         </div>
 
         <div class="form-group">
-            <input type="password" class="form-control form-control-lg" v-model="password_confirmation" required />
+            <input type="password" class="form-control form-control-lg" v-model="password_confirmation" placeholder="retype password" required />
         </div>
         <button type="submit" class="btn btn-primary btn-block">submit</button>
     </form>
@@ -28,7 +32,7 @@
         methods: {
             async handleSubmit(){
                 const response = await axios.post('http://127.0.0.1:8000/api/auth/resetPassword',{
-                    token:this.$route.params.token,
+                    resetToken:this.$route.params.resetToken,
                     email:this.email,
                     password:this.password,
                     password_confirmation:this.password_confirmation
@@ -64,14 +68,14 @@
     border: 1px solid #9c9c9c;
     border-radius: 10px;
     width: 430px;
-    height: 280px;
+    height: 450px;
     text-align: center;
     padding: 25px;
     background: #fff;
   }
   
   input {
-    height: 15%;
+    height: 10%;
     border-radius: 100px;
     padding: 10px 15px;
     width: 77%;
