@@ -1,21 +1,19 @@
-import 
 <template>
-
-<div class="formx">
+<form @submit.prevent="handleSubmit">
+<!-- <div class="formx"> -->
   <h3>Login</h3>
   <!-- <img src="https://st2.depositphotos.com/5142301/7765/v/950/depositphotos_77650712-stock-illustration-f-letter-with-green-leaves.jpg">  -->
                              
-<input type="email" name="email" placeholder="Email" />
+<input type="email" name="email" v-model="email" placeholder="Email" />
    
-  <input type="password" name="Password" placeholder="Password" />
+  <input type="password" name="Password" v-model="password" placeholder="Password" />
 
-  <button>login</button>
-   
+<button class="btn btn-primary btn-block">login</button>   
 
   <a href="http://localhost:8080/register">Create account</a>
   <a href="http://localhost:8080/forgot-password">forgot password</a>
-</div>
-    
+<!-- </div> -->
+</form>
 
 </template>
 
@@ -66,10 +64,10 @@ export default {
     border-radius: 50%;
   }
   
-  .formx {
+  form {
     background-color: #ffffff;
-    width: 415px;
-    margin: 111px auto 10px auto;
+    width: 350px;
+    margin: 10px auto 10px auto;
     padding: 30px;
     border-radius: 8px;
     overflow: hidden;
@@ -92,7 +90,7 @@ export default {
     border-radius: 100px;
     border: none;
     background: #4971f6;
-    width: 20%;
+    width: 30%;
     padding: 10px;
     color: #FFFFFF;
     margin-top: 25px;
