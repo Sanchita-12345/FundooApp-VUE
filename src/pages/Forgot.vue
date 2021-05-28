@@ -1,7 +1,7 @@
 <template>
     <div class="box">
       <div class="inner-box">
-          <form @submit.prevent="handlesubmit">
+          <form @submit.prevent="handleSubmit">
               <h3>Forgot Password</h3>
 
               <input type="email" v-model="email" placeholder="Email Address"/>
