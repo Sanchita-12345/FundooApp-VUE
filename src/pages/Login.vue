@@ -37,6 +37,8 @@ export default {
             alert("logged in..")
             // console.log(response)  displaying token on console
             localStorage.setItem('token', response.data.token); //locally storing token
+            this.$router.push('/dashboard');
+
         }
     }
 }
