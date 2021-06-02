@@ -1,25 +1,23 @@
 <template>
 <form @submit.prevent="handleSubmit">
-<!-- <div class="formx"> -->
-  <h3>Login</h3>
-  <!-- <img src="https://st2.depositphotos.com/5142301/7765/v/950/depositphotos_77650712-stock-illustration-f-letter-with-green-leaves.jpg">  -->
-                             
-<input type="email" name="email" v-model="email" placeholder="Email" />
-   
-  <input type="password" name="Password" v-model="password" placeholder="Password" />
+    <!-- <div class="formx"> -->
+    <h3>Login</h3>
+    <!-- <img src="https://st2.depositphotos.com/5142301/7765/v/950/depositphotos_77650712-stock-illustration-f-letter-with-green-leaves.jpg">  -->
 
-<button class="btn btn-primary btn-block">login</button>   
+    <input type="email" name="email" v-model="email" placeholder="Email" />
 
-  <a href="http://localhost:8080/register">Create account</a>
-  <a href="http://localhost:8080/forgot-password">forgot password</a>
-<!-- </div> -->
+    <input type="password" name="Password" v-model="password" placeholder="Password" />
+
+    <button class="btn btn-primary btn-block">login</button>
+
+    <a href="http://localhost:8080/register">Create account</a>
+    <a href="http://localhost:8080/forgot-password">forgot password</a>
+    <!-- </div> -->
 </form>
-
 </template>
 
 <script>
-
-    import axios from 'axios';
+import axios from 'axios';
 export default {
     name: 'Login',
     data() {
@@ -43,75 +41,7 @@ export default {
     }
 }
 </script>
-<style scoped>
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #eeeeee;
-  }
-  
-  h3{
-    font-family: roboto;
-    font-weight: bold;
-    color: #0e39c5;
-    font-size:35px;
-  }
-  img {
-    display: block;
-    width: 80px;
-    margin: 30px auto;
-    /* box-shadow: 0 5px 10px -7px #333333; */
-    border-radius: 50%;
-  }
-  
-  form {
-    background-color: #ffffff;
-    width: 350px;
-    margin: 10px auto 10px auto;
-    padding: 30px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px -3px #333;
-    text-align: center;
-    height: 366px;
-  }
-  
-  input {
-    border-radius: 100px;
-    padding: 10px 15px;
-    width: 77%;
-    border: 1px solid #D9D9D9;
-    outline: none;
-    display: block;
-    margin: 20px auto 20px auto;
-  }
-  
-  button {
-    border-radius: 100px;
-    border: none;
-    background: #4971f6;
-    width: 30%;
-    padding: 10px;
-    color: #FFFFFF;
-    margin-top: 25px;
-    box-shadow: 0 2px 10px -3px #719BE6;
-    display: block;
-    margin: 55px auto 10px auto;
-  }
-  
-  a {
-    text-align: center;
-    margin-top: 30px;
-    color: #4971f6;
-    text-decoration: none;
-    padding: 5px;
-    display: inline-block;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+
+<style scoped src="C:\Users\sanch\Desktop\8\fundooapp\src\styles\Login.css">
 
 </style>
