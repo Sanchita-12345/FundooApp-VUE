@@ -39,12 +39,14 @@
 
     <nav class="navbar navbar-default">
         <div class="navbar-header">
+
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Google_Keep_icon_%282020%29.svg/1200px-Google_Keep_icon_%282020%29.svg.png" alt="not" />
             <span class="navbar-brand">Fundoo</span>
             <input type="text" placeholder="Search..">
             <div class="listview">
-                <span class="las la-list"></span>
+                <span class="las la-user-circle"></span>
             </div>
+
             <!-- <div class="inbox">
                     <form>
                         <input type="text" placeholder="Title" name="title"/>
@@ -56,9 +58,6 @@
                 </div> -->
         </div>
 
-        <div class="usericon">
-            <span class="fas fa-user-circle"></span>
-        </div>
     </nav>
 
 </div>
