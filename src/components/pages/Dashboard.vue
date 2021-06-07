@@ -1,9 +1,6 @@
 <template>
 <div class="sidebar">
-    <!-- <input type="checkbox" id="openSidebarMenu"> -->
-    <!-- <label for="openSidebarMenu" class="sidebarIconToggle"></label> -->
     <div class="main-content">
-
         <header>
             <h1>
                 <label for="nav-toggle">
@@ -39,33 +36,20 @@
 
     <nav class="navbar navbar-default">
         <div class="navbar-header">
-
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Google_Keep_icon_%282020%29.svg/1200px-Google_Keep_icon_%282020%29.svg.png" alt="not" />
+            <img src="../../../src/assets/keeplogo.png" alt="not" />
             <span class="navbar-brand">Fundoo</span>
             <input type="text" placeholder="Search..">
             <div class="listview">
                 <span class="las la-user-circle"></span>
             </div>
-
-            <!-- <div class="inbox">
-                    <form>
-                        <input type="text" placeholder="Title" name="title"/>
-                        <p>
-                            <textarea name="content" placeholder="Take a note"></textarea>
-                        </p>
-                        <button type="submit">Add</button>
-                    </form>
-                </div> -->
         </div>
-
     </nav>
-
 </div>
 </template>
 
 <script src="C:\Users\sanch\Desktop\8\fundooapp\src\components\Hidebar.js">
 </script>
 
-<style scoped src="C:\Users\sanch\Desktop\8\fundooapp\src\styles\Dashboard.css">
+<style scoped src="../../../src/styles/Dashboard.css">
 
 </style>
