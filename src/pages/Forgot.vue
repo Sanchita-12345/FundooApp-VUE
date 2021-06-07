@@ -3,10 +3,8 @@
     <div class="inner-box">
         <form @submit.prevent="handleSubmit">
             <h3>Forgot Password</h3>
-
             <input type="email" v-model="email" placeholder="Email Address" />
             <button type="submit" class="btn btn-primary btn-block">submit</button>
-
         </form>
     </div>
 </div>
@@ -33,6 +31,6 @@ export default {
 }
 </script>
 
-<style scoped src="C:\Users\sanch\Desktop\8\fundooapp\src\styles\Forgot.css">
+<style scoped src="../../src/styles/Forgot.css">
 
 </style>
