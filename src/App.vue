@@ -7,13 +7,13 @@
 </template>
 
 <script>
-//import Nav from './components/pages/Nav.vue'
-import Note from './components/pages/Note.vue'
+// import Nav from './components/pages/Nav.vue'
+// import Createnote from './components/pages/Createnote.vue'
 export default {
     name: 'App',
     components: {
-        //Nav,
-        Note
+        // Nav,
+        // Createnote
     }
 }
 </script>
