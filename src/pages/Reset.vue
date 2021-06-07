@@ -45,6 +45,6 @@ export default {
 }
 </script>
 
-<style scoped src="C:\Users\sanch\Desktop\8\fundooapp\src\styles\Reset.css">
+<style scoped src="../../src/styles/Reset.css">
 
 </style>
