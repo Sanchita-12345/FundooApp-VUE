@@ -47,7 +47,7 @@
         <input type="submit" value="Next">
     </form>
     <div class="side-image">
-        <img src="../../src/assets/images.jpg" alt="" class="side-logo">
+        <img src="../../src/assets/images.jpg" alt="google-sign-in-logo" class="side-logo">
     </div>
 </div>
 </template>
@@ -61,7 +61,7 @@ Vue.use(VueAxios, axios)
 export default {
     name: 'Register',
 
-    data() {
+    data() {   //data to be returned
         return {
             name: '',
             email: '',
@@ -81,14 +81,14 @@ export default {
             //axios postmethod to communicate with api
             //register-->shortest form of url
             //await and async[const response = ]
-            await axios.post('/register', {
+            await axios.post('/register', {   //connecting with backend using axios
                 name: this.name,
                 email: this.email,
                 password: this.password,
                 password_confirmation: this.password_confirmation
             });
-            alert("user registered successfully..!")
-            this.$router.push('/');
+            alert("user registered successfully..!")   //alert messeage
+            this.$router.push('/');    //redirecting to the login page
         }
     }
 }
