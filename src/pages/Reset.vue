@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios'   //axios for connecting backend with front end
 export default {
     name: 'Reset',
-    data() {
+    data() {                //data which are to be returned
         return {
             resetToken: '',
             email: '',
@@ -45,6 +45,6 @@ export default {
 }
 </script>
 
-<style scoped src="../../src/styles/Reset.css">
-
+<style scoped lang="scss">
+@import "@/SCSS/Reset.scss";
 </style>
