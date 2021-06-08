@@ -47,9 +47,7 @@
 </div>
 </template>
 
-<script src="C:\Users\sanch\Desktop\8\fundooapp\src\components\Hidebar.js">
-</script>
+<style scoped lang="scss">
 
-<style scoped src="../../../src/styles/Dashboard.css">
-
+@import "@/SCSS/Dashboard.scss";
 </style>
