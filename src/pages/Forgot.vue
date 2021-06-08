@@ -11,26 +11,26 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios'  //axios for connecting backend with front end
 export default {
     name: 'Forgot',
-    data() {
+    data() {           //data which are to be returned
         return {
             email: ''
         }
     },
     methods: {
-        async handleSubmit() {
+        async handleSubmit() {     //connecting the backend
             const response = await axios.post('http://127.0.0.1:8000/api/auth/sendPasswordResetLink', {
                 email: this.email
             });
             console.log(response);
-            this.$router.push('/resetPassword/:resetToken')
+            this.$router.push('/resetPassword/:resetToken')   //push to the reset password page
         }
     }
 }
 </script>
 
-<style scoped src="../../src/styles/Forgot.css">
-
+<style scoped lang="scss">
+@import "@/SCSS/Forgot.scss";
 </style>
