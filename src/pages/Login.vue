@@ -13,7 +13,7 @@
 import axios from 'axios';
 export default {
     name: 'Login',
-    data() {
+    data() {  //data which are to be returned
         return {
             email: '',
             password: ''
@@ -21,11 +21,11 @@ export default {
     },
     methods: {
         async handleSubmit() {
-            const response = await axios.post('/login', {
+            const response = await axios.post('/login', { //connecting backend using axios
                 email: this.email,
                 password: this.password
             });
-            alert("logged in..")
+            alert("logged in..") //alert message
             localStorage.setItem('token', response.data.token); //locally storing token
             this.$router.push('/dashboard'); //redirecting to the dashboard
 
@@ -34,6 +34,7 @@ export default {
 }
 </script>
 
-<style scoped src="../../src/styles/Login.css">
+<style scoped lang="scss">
 
+@import "@/SCSS/Login.scss";
 </style>
