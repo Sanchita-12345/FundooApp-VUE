@@ -2,14 +2,7 @@
 <div class="main">
     <form @submit.prevent="handleSubmit">
         <div class="head">
-            <p>
-                <span style='color: blue'>F</span>
-                <span style='color: red'>u</span>
-                <span style='color: yellow'>n</span>
-                <span style='color: blue'>d</span>
-                <span style='color: green'>o</span>
-                <span style='color: red'>o</span>
-            </p>
+            <Title />
             <h3>Create your FundooApp Account</h3>
         </div>
 
@@ -56,11 +49,12 @@
 import Vue from 'vue';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import Title from '../../src/components/pages/Title.vue'
 
 Vue.use(VueAxios, axios)
 export default {
     name: 'Register',
-
+    components: {Title},
     data() {   //data to be returned
         return {
             name: '',
