@@ -3,7 +3,7 @@
     <div class="inner-box">
         <form @submit.prevent="handleSubmit">
             <h3>Forgot Password</h3>
-            <input type="email" v-model="email" placeholder="Email Address" />
+            <input type="email" v-model="email" placeholder="Email Address" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
             <button type="submit" class="btn btn-primary btn-block">submit</button>
         </form>
     </div>
@@ -11,26 +11,31 @@
 </template>
 
 <script>
-import axios from 'axios'  //axios for connecting backend with front end
+// import axios from 'axios'  
+import service from '../service/User'
 export default {
     name: 'Forgot',
-    data() {           //data which are to be returned
+    data() { //data which are to be returned
         return {
             email: ''
         }
     },
     methods: {
-        async handleSubmit() {     //connecting the backend
-            const response = await axios.post('http://127.0.0.1:8000/api/auth/sendPasswordResetLink', {
+
+        async handleSubmit() {
+            let userData = {
                 email: this.email
-            });
-            console.log(response);
-            this.$router.push('/resetPassword/:resetToken')   //push to the reset password page
+            }
+            service.userForgotPassword(userData).then(response => {
+                console.log(response);
+                alert("mail is sended successfully")
+                this.$router.push('/resetPassword/:resetToken') //redirecting to the dashboard
+            })
         }
     }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "@/SCSS/Forgot.scss";
 </style>
