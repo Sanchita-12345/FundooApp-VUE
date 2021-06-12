@@ -6,8 +6,7 @@ import Forgot from './pages/Forgot.vue'
 import Reset from './pages/Reset.vue'
 import Dashboard from './components/pages/Dashboard.vue'
 import Createnote from './components/pages/Createnote.vue'
-import Createnotehide from './components/pages/Createnotehide.vue'
-
+import Getnote from './components/pages/Getnote.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -17,9 +16,15 @@ export default new Router({
         {path:'/register', component: Register},
         {path:'/forgot-password', component: Forgot},
         {path:'/resetPassword/:resetToken', component: Reset},
-        {path:'/dashboard', component: Dashboard},
-        {path:'/createnote', component: Createnote},
-        {path:'/createnotehide', component: Createnotehide},
+        {
+            path:'/dashboard',
+            component:Dashboard,
+            children:[{
+                path:'/createnote',
+                component:Createnote
+            }]
+        },
 
+        {path:'/getnote', component: Getnote},
     ]
 })
