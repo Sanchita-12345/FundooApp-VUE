@@ -1,53 +1,61 @@
 <template>
-<div class="sidebar">
-    <div class="main-content">
-        <header>
-            <h1>
-                <label for="nav-toggle">
-                    <span class="las la-bars" @click="toggleMenu(this)"></span>
-                </label>
-            </h1>
-        </header>
-    </div>
-    <div class="sidebar-menu">
-        <ul>
-            <li>
-                <span class="lar la-lightbulb"></span>
-                <span>Notes</span>
-            </li>
-            <li>
-                <span class="las la-bell"></span>
-                <span>Reminder</span>
-            </li>
-            <li>
-                <span class="las la-pen"></span>
-                <span>Edit Lebels</span>
-            </li>
-            <li>
-                <span class="las la-archive"></span>
-                <span>Archive</span>
-            </li>
-            <li>
-                <span class="las la-box"></span>
-                <span>Bin</span>
-            </li>
-        </ul>
-    </div>
+<div class="main">
+    <header>
+        <!-- <label for="check"> -->
+            <span id="menu-btn" style="cursor:pointer;" class="fas fa-bars" @click="toggleMenu()"></span>
+        <!-- </label> -->
+        <div class="logo">
+            <img src="../../../src/assets/keeplogo.png" style="height:38px" alt="not" />
+            <span class="logo-brand">Fundoo</span>
+        </div>
 
-    <nav class="navbar navbar-default">
-        <div class="navbar-header">
-            <img src="../../../src/assets/keeplogo.png" alt="not" />
-            <span class="navbar-brand">Fundoo</span>
-            <input type="text" placeholder="Search..">
-            <div class="listview">
-                <span class="las la-user-circle"></span>
+        <div class="input-box">
+            <div class="search-box">
+                <input class="search-note" type="search" id="search" placeholder="Search.." />
             </div>
         </div>
-    </nav>
+        <div class="usericon">
+            <span class="las la-user-circle"></span>
+        </div>
+        <hr>
+    </header>
+    <div class="sidebar-menu" @click="toggleMenu()">
+        <ul>
+            <a href=""><span class="lar la-lightbulb"></span>
+                <span>Notes</span></a>
+
+            <a href=""><span class="las la-bell"></span>
+                <span>Reminders</span></a>
+
+            <a href=""><span class="las la-pen"></span>
+                <span>Edit Labels</span></a>
+
+            <a href=""><span class="las la-archive"></span>
+                <span>Archive</span></a>
+
+            <a href=""><span class="las la-box"></span>
+                <span>Bin</span></a>
+        </ul>
+    </div>
+    <Createnote />
 </div>
 </template>
 
-<style scoped lang="scss">
+<script>
+import Createnote from '../pages/Createnote.vue'
+export default {
+    components: {
+        Createnote
+    },
+    data(){},
+    methods:{
+        toggleMenu(){
+            document.getElementById("sidebar-menu").classList.toggle("active");
+        },
+    }
+}
+</script>
 
+<style scoped lang="scss">
 @import "@/SCSS/Dashboard.scss";
 </style>
