@@ -58,8 +58,9 @@ export default {
 </script>
 
 <style scoped>
+
 .small-title input{
-    width: 600px;
+    /* width: 600px; */
     height: 45px;
     margin-top: 108px;
     border-radius: 7px;
@@ -69,13 +70,15 @@ export default {
     margin-left: -90px;
     font-size: 1.1rem;
     resize: none;
+    width: 600px;
+    margin-left: 420px;
 }
 
 .la-check-square {
     position: fixed;
     font-size: 28px;
     color: rgb(97, 96, 96);
-    margin-left: 360px;
+    margin-left: 870px;
     margin-top: -35px;
 }
 
@@ -83,7 +86,7 @@ export default {
     position: fixed;
     font-size: 28px;
     color: rgb(97, 96, 96);
-    margin-left: 410px;
+    margin-left: 920px;
     margin-top: -35px;
 }
 
@@ -91,7 +94,7 @@ export default {
     position: fixed;
     font-size: 28px;
     color: rgb(97, 96, 96);
-    margin-left: 460px;
+    margin-left: 970px;
     margin-top: -35px;
 }
 
@@ -106,6 +109,8 @@ export default {
     margin-bottom: -200px;
     margin-top: 250px;
     position: fixed;
+    width: 400px;
+    margin-left: 500px;
 }
 
 form {
@@ -113,7 +118,7 @@ form {
     height: 150px;
     box-shadow: 5px 5px 10px #e0dede;
     margin-top: -70px;
-    margin-left: -40px;
+    margin-left: 20px;
     padding: 10px;
 }
 
