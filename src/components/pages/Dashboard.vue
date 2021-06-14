@@ -1,10 +1,9 @@
 <template>
 <div class="main">
     <header>
-        <!-- <label for="check"> -->
-            <span id="menu-btn" style="cursor:pointer;" class="fas fa-bars" @click="toggleMenu()"></span>
-        <!-- </label> -->
         <div class="logo">
+            <span id="menu-btn" style="cursor:pointer;" class="fas fa-bars" @click="myFunction()"></span>
+
             <img src="../../../src/assets/keeplogo.png" style="height:38px" alt="not" />
             <span class="logo-brand">Fundoo</span>
         </div>
@@ -14,12 +13,13 @@
                 <input class="search-note" type="search" id="search" placeholder="Search.." />
             </div>
         </div>
+
         <div class="usericon">
             <span class="las la-user-circle"></span>
         </div>
         <hr>
     </header>
-    <div class="sidebar-menu" @click="toggleMenu()">
+    <div class="sidebar-menu" id="side">
         <ul>
             <a href=""><span class="lar la-lightbulb"></span>
                 <span>Notes</span></a>
@@ -49,9 +49,15 @@ export default {
     },
     data(){},
     methods:{
-        toggleMenu(){
-            document.getElementById("sidebar-menu").classList.toggle("active");
-        },
+        myFunction() {
+            var x = document.getElementById("side");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } 
+            else {
+                x.style.display = "none";
+            }
+        }
     }
 }
 </script>
