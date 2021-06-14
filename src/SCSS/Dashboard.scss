@@ -89,7 +89,7 @@ input[type="search"] {
     margin: 35px 0;
     margin-left: -18%;
     transition: 0.5s;
-    margin-top: -5px;
+    margin-top: 10px;
     /* transition-property: color; */
 }
 
@@ -100,5 +100,5 @@ hr {
 }
 
 .sidebar-menu .active{
-    left: 0;
+    left: -30%;
 }
