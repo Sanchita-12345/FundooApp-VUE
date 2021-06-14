@@ -16,6 +16,8 @@ input[type="search"] {
     height: 50px;
     background-color: rgb(241, 240, 240);
     border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 .logo {
@@ -28,7 +30,7 @@ input[type="search"] {
     line-height: 36px;
     color: #5f6368;
     font-size: 23px;
-    font-family: 'Product Sans', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
 }
 
@@ -56,6 +58,7 @@ input[type="search"] {
     transition: 0.5s;
     transition-property: left;
     font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .sidebar-menu a {
@@ -68,6 +71,7 @@ input[type="search"] {
     box-sizing: border-box;
     transition: 0.5s;
     transition-property: none;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .sidebar-menu a:hover {
@@ -83,14 +87,12 @@ input[type="search"] {
  .fa-bars {
     z-index: 1;
     position: fixed;
-    // cursor: pointer;
     left: 300px;
     font-size: 27px;
     margin: 35px 0;
     margin-left: -18%;
     transition: 0.5s;
     margin-top: 10px;
-    /* transition-property: color; */
 }
 
 hr {
