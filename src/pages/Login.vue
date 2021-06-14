@@ -29,31 +29,11 @@ export default {
             // console.log("user log in",userData);
             service.userLogin(userData).then(response =>{
                 console.log("user logged in",response);
-                alert("logged in..") //alert message
                 localStorage.setItem('token', response.data.token); //locally storing token
+                alert("logged in..") //alert message
                 this.$router.push('/dashboard'); //redirecting to the dashboard
             })
-            // const response = await axios.post('/login', { //connecting backend using axios
-            //     email: this.email,
-            //     password: this.password
-            // });
-            // alert("logged in..") //alert message
-            // localStorage.setItem('token', response.data.token); //locally storing token
-            // this.$router.push('/dashboard'); //redirecting to the dashboard
-
         }
-
-        // userLogin(){
-        //     let data={
-        //         email: this.email,
-        //         password: this.password
-        //     };
-        //     console.log("data to be sent",data);
-        //      service.userLogin(data).then(response=>{
-        //          console.log("response from login",response);
-        //          this.$router.push('/dashboard');
-        //      })
-        // }
     }
 }
 </script>
