@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// import axios from 'axios';
 import service from '../service/User'
 export default {
     name: 'Login',
@@ -26,12 +25,13 @@ export default {
                 email: this.email,
                 password: this.password
             }
-            // console.log("user log in",userData);
             service.userLogin(userData).then(response =>{
                 console.log("user logged in",response);
                 localStorage.setItem('token', response.data.token); //locally storing token
                 alert("logged in..") //alert message
                 this.$router.push('/dashboard'); //redirecting to the dashboard
+            }).catch(error =>{
+                alert("error...!!! invalid input",error);
             })
         }
     }
