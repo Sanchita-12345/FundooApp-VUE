@@ -30,6 +30,8 @@ export default {
                 console.log(response);
                 alert("mail is sended successfully")
                 this.$router.push('/resetPassword/:resetToken') //redirecting to the dashboard
+            }).catch(error =>{
+                alert("given email id is not registered...!!!",error);
             })
         }
     }
