@@ -15,7 +15,7 @@
                 <input name="title" id="name-in" v-model="title" placeholder="Title" autocomplete="off" />
                 <textarea name="content" id="text-in" v-model="description" placeholder="Take a note..." autocomplete="off"></textarea>
                 <Icon />
-                <button v-on:click="handleSubmit(); flip();" type="submit">close</button>
+                <button v-on:click="myAllFunction()" type="submit">Close</button>
             <!-- </div> -->
         </form>
     </div>
@@ -38,6 +38,9 @@ export default {
         }
     },
     methods: {
+        myAllFunction(){
+            this.flip() + this.handleSubmit()
+        },
         flip() {
             this.flag = !this.flag;
         },
@@ -46,11 +49,14 @@ export default {
                 title: this.title,
                 description: this.description
             }
-            // console.log("user data", userData);
             service.userCreateNote(userData).then(response => {
-                console.log("notes", response);
-                alert("create note successfully..");
+                console.log("note created", response);
                 localStorage.getItem('token', response.data.token);
+                alert("create note successfully..");
+                this.title="";
+                this.description="";
+            }).catch(error =>{
+                alert("error...!!!",error);
             })
         }
     }
