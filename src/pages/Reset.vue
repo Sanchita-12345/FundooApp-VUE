@@ -2,9 +2,9 @@
 <form @submit.prevent="handleSubmit">
     <h3>Reset Password</h3>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
             <input type="email" class="form-control form-control-lg" v-model="email" placeholder="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
-        </div>
+        </div> -->
 
     <div class="form-group">
         <input type="password" class="form-control form-control-lg" v-model="password" placeholder="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required />
@@ -43,6 +43,8 @@ export default {
                 console.log(response);
                 alert("password updated successfully")
                 this.$router.push('/') //redirecting to the dashboard
+            }).catch(error=>{
+                alert("error...!!!",error);
             })
     }
         
