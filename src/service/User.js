@@ -1,7 +1,3 @@
-// import axios from 'axios';
-// import AxiosService from '../service/axios';
-// const axios=new AxiosService()
-// import axios from 'axios'
 import AxiosService from '../service/axios';
 const axios = new AxiosService()
 export default{
