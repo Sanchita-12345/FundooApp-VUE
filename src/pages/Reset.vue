@@ -18,11 +18,10 @@
 </template>
 
 <script>
-// import axios from 'axios'   
 import service from '../service/User'
 export default {
     name: 'Reset',
-    data() {                //data which are to be returned
+    data() {                
         return {
             resetToken: '',
             email: '',
@@ -42,9 +41,10 @@ export default {
         service.userResetPassword(userData).then(response =>{
                 console.log(response);
                 alert("password updated successfully")
-                this.$router.push('/') //redirecting to the dashboard
+                this.$router.push('/')
             }).catch(error=>{
-                alert("error...!!!",error);
+                alert("error...!!!");
+                return error;
             })
     }
         
