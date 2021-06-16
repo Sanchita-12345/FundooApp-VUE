@@ -27,11 +27,12 @@ export default {
             }
             service.userLogin(userData).then(response =>{
                 console.log("user logged in",response);
-                localStorage.setItem('token', response.data.token); //locally storing token
-                alert("logged in..") //alert message
-                this.$router.push('/dashboard'); //redirecting to the dashboard
+                localStorage.setItem('token', response.data.token); 
+                alert("logged in..") 
+                this.$router.push('/dashboard'); 
             }).catch(error =>{
-                alert("error...!!! invalid input",error);
+                alert("error...!!! invalid input");
+                return error;
             })
         }
     }
