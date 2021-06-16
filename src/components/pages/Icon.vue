@@ -11,44 +11,44 @@
 
 <style scoped>
 .footer .la-bell {
-    position: fixed;
+    position: relative;
     font-size: 20px;
     margin-top: 5px;
     margin-left: 10px;
 }
 
 .footer .la-user-plus {
-    position: fixed;
+    position: relative;
     font-size: 20px;
     margin-top: 5px;
-    margin-left: 55px;
+    margin-left: 20px;
 }
 
 .footer .la-palette {
-    position: fixed;
+    position: relative;
     font-size: 20px;
     margin-top: 5px;
-    margin-left: 95px;
+    margin-left: 24px;
 }
 
 .footer .la-image {
-    position: fixed;
+    position: relative;
     font-size: 20px;
     margin-top: 5px;
-    margin-left: 145px;
+    margin-left: 27px;
 }
 
 .footer .la-archive {
-    position: fixed;
+    position: relative;
     font-size: 20px;
     margin-top: 5px;
-    margin-left: 190px;
+    margin-left: 30px;
 }
 
 .footer .la-ellipsis-v {
-    position: fixed;
+    position: relative;
     font-size: 20px;
     margin-top: 5px;
-    margin-left: 230px;
+    margin-left: 30px;
 }
 </style>
