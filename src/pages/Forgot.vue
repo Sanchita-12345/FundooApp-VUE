@@ -11,11 +11,10 @@
 </template>
 
 <script>
-// import axios from 'axios'  
 import service from '../service/User'
 export default {
     name: 'Forgot',
-    data() { //data which are to be returned
+    data() { 
         return {
             email: ''
         }
@@ -29,9 +28,10 @@ export default {
             service.userForgotPassword(userData).then(response => {
                 console.log(response);
                 alert("mail is sended successfully")
-                this.$router.push('/resetPassword/:resetToken') //redirecting to the dashboard
+                this.$router.push('/resetPassword/:resetToken')
             }).catch(error =>{
-                alert("given email id is not registered...!!!",error);
+                alert("given email id is not registered...!!!");
+                return error;
             })
         }
     }
