@@ -1,0 +1,44 @@
+.carddisplay-container {
+    height: 170px;
+    background: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px #e0dede;
+    margin-top: 15px;
+    margin-left: 18%;
+    margin-right:-16%;
+    float: left;
+    width:24%;
+}
+
+.carddisplay-notes{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: space-around;
+  gap: 10px;
+}
+.carddisplay h3{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px 10px;
+}
+.carddisplay p{
+    font-size: 20px;
+    width: 90%;
+    height: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    border: none;
+    padding: 0px 10px;
+    outline: none;
+    resize: none;
+}
+.card-button{
+    margin-left: 270px;
+    font-size: 15px;
+    margin-top: -15px;
+    border: none;
+    background: white;
+    /* color: white; */
+}
