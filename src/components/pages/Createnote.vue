@@ -10,25 +10,26 @@
     </div>
     <div class="card" v-if="flag==false">
         <form class="createnote" @submit.prevent="handleSubmit">
-
-            <!-- <div v-if="flag==false" class="ball"> -->
-                <input name="title" id="name-in" v-model="title" placeholder="Title" autocomplete="off" />
-                <textarea name="content" id="text-in" v-model="description" placeholder="Take a note..." autocomplete="off"></textarea>
-                <Icon />
-                <button v-on:click="myAllFunction()" type="submit">Close</button>
-            <!-- </div> -->
+            <input name="title" id="name-in" v-model="title" placeholder="Title" autocomplete="off" />
+            <textarea name="content" id="text-in" v-model="description" placeholder="Take a note..." autocomplete="off"></textarea>
+            <Icon />
+            <button v-on:click="myAllFunction()" type="submit">Close</button>
         </form>
     </div>
+    <Getnote v-if="flag==true" />
 </div>
 </template>
 
 <script>
-// import axios from 'axios'
 import service from '../../service/User'
 import Icon from '../../components/pages/Icon.vue'
+import Getnote from './Getnote.vue'
 export default {
     name: 'Createnote',
-    components: {Icon},
+    components: {
+        Icon,
+        Getnote
+    },
     data() {
         return {
             visibleNote: false,
@@ -38,7 +39,7 @@ export default {
         }
     },
     methods: {
-        myAllFunction(){
+        myAllFunction() {
             this.flip() + this.handleSubmit()
         },
         flip() {
@@ -53,16 +54,17 @@ export default {
                 console.log("note created", response);
                 localStorage.getItem('token', response.data.token);
                 alert("create note successfully..");
-                this.title="";
-                this.description="";
-            }).catch(error =>{
-                alert("error...!!!",error);
+                this.title = "";
+                this.description = "";
+            }).catch(error => {
+                alert("error...!!!");
+                return error;
             })
         }
     }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "@/SCSS/Createnote.scss";
 </style>
