@@ -13,4 +13,12 @@ export default class AxiosService{
             return error;
         })
     }
+
+    getData(url){
+        return axios.get(url).then(response =>{
+            return response;
+        }).catch(error=>{
+            return error;
+        })
+    }
 }
