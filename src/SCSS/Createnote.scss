@@ -13,28 +13,32 @@
     margin-left: 420px;
 }
 
-.la-check-square {
-    position: fixed;
+.small-title .la-check-square {
+    // position: fixed;
+    position: relative;
     font-size: 28px;
     color: rgb(97, 96, 96);
     margin-left: 870px;
-    margin-top: -35px;
+    top: -34px;
+    // margin-top: auto;
 }
 
-.la-paint-brush {
-    position: fixed;
+.small-title .la-paint-brush {
+    // position: fixed;
+    position: relative;
     font-size: 28px;
     color: rgb(97, 96, 96);
     margin-left: 920px;
-    margin-top: -35px;
+    top: -63px;
 }
 
-.la-image {
-    position: fixed;
+.small-title .la-image {
+    // position: fixed;
+    position: relative;
     font-size: 28px;
     color: rgb(97, 96, 96);
     margin-left: 970px;
-    margin-top: -35px;
+    top: -90px;
 }
 
 .card {
