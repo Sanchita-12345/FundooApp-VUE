@@ -1,9 +1,10 @@
+@import './Color.scss';
 .carddisplay-container {
     height: 170px;
-    background: #fff;
+    background: $white;
     padding: 7px;
     border-radius: 7px;
-    box-shadow: 5px 5px 10px #e0dede;
+    box-shadow: 5px 5px 10px $input_box_shadow;
     margin-top: 15px;
     margin-left: 18%;
     margin-right:-16%;
@@ -22,6 +23,8 @@
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     padding: 0px 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .carddisplay p{
     font-size: 20px;
@@ -33,12 +36,21 @@
     padding: 0px 10px;
     outline: none;
     resize: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .card-button{
     margin-left: 270px;
     font-size: 15px;
     margin-top: -15px;
     border: none;
-    background: white;
+    background: $white;
     /* color: white; */
+}
+#popup{
+    position: fixed;
+    visibility: hidden;
+}
+#popup.active{
+    visibility: visible;
 }
