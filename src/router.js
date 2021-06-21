@@ -7,7 +7,7 @@ import Reset from './pages/Reset.vue'
 import Dashboard from './components/pages/Dashboard.vue'
 import Createnote from './components/pages/Createnote.vue'
 import Getnote from './components/pages/Getnote.vue'
-// import { component } from 'vue/types/umd'
+import Updatenote from './components/pages/Updatenote.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -27,8 +27,12 @@ export default new Router({
             {   path:'/getnote',
                 component:Getnote
             },
+            {   path:'/updatenote',
+                component: Updatenote
+            }
         ]
         },
+        
     ]
-    
+
 })
