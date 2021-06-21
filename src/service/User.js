@@ -18,5 +18,8 @@ export default{
     },
     userGetNote(){
         return axios.getData("/notes");
-    }
+    },
+    userUpdateNote(data){
+        return axios.updateData(`/notes/${data.id}`, data);
+    },
 }
