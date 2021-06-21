@@ -1,7 +1,7 @@
 <template>
 <div class="carddisplay-notes">
-    <div class="carddisplay-container" v-for="note in notes" :key="note.data">
-        <div class="carddisplay">
+    <div class="carddisplay-container" v-for="note in notes" :key="note.id">
+        <div class="carddisplay" @click="togglePopup(note.id)">
             <h3>{{note.title}}</h3>
             <p>{{note.description}}</p>
         </div>
@@ -10,16 +10,20 @@
             <button class="card-button" type="button" v-if="flag" @click="handleSubmit();ToggleButton();">Close</button>
         </div>
     </div>
+    <div class="cardupdate-popup" id="popup">
+        <Updatenote :cardId="clickedCard" :cardContent="cardContent" />
+    </div>
 </div>
 </template>
 
 <script>
 import service from '../../service/User'
 import Icon from '../../components/pages/Icon.vue'
+import Updatenote from '../../components/pages/Updatenote.vue'
 export default {
     name: 'Getnote',
     components: {
-        Icon
+        Icon, Updatenote
     },
     data() {
         return {
@@ -29,6 +33,8 @@ export default {
                 title: 'notes',
                 description: 'display notes'
             },],
+            clickedCard: '',
+            cardContent: {},
         }
     },
     methods: {
@@ -37,8 +43,14 @@ export default {
         },
         async handleSubmit() {
             service.userGetNote().then(response => {
+                console.log("user data",response);
                 this.notes.push(...response.data);
             })
+        },
+        togglePopup(id){
+            var popup=document.getElementById('popup');
+            popup.classList.toggle('active');
+            this.clickedCard = id;
         }
     }
 }
