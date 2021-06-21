@@ -21,4 +21,12 @@ export default class AxiosService{
             return error;
         })
     }
+
+    updateData(url, data){
+        return axios.put(url, data).then(response=>{
+            return response;
+        }).catch(error=>{
+            return error;
+        })
+    }
 }
