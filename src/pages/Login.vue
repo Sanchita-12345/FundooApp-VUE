@@ -13,7 +13,7 @@
 import service from '../service/User'
 export default {
     name: 'Login',
-    data() {  //data which are to be returned
+    data() {  
         return {
             email: '',
             password: ''
