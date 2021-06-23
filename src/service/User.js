@@ -22,4 +22,7 @@ export default{
     userUpdateNote(data){
         return axios.updateData(`/notes/${data.id}`, data);
     },
+    userDeleteNote(data){
+        return axios.deleteData(`/notes/${data.id}`, data);
+    },
 }
