@@ -6,7 +6,7 @@
             <p>{{note.description}}</p>
         </div>
         <div class="carddisplay-icons">
-            <Icon />
+            <Icon :cardId="note.id" />
             <button class="card-button" type="button" v-if="flag" @click="handleSubmit();ToggleButton();">Close</button>
         </div>
     </div>
@@ -57,5 +57,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/SCSS/Getnote.scss";
+@import "@/scss/Getnote.scss";
 </style>
