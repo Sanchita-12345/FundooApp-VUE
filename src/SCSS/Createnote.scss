@@ -3,7 +3,7 @@
     height: 45px;
     margin-top: 108px;
     border-radius: 7px;
-    box-shadow: 5px 5px 10px $input_box_shadow;
+    box-shadow: 5px 5px 10px $beige;
     font-family:'Times New Roman', Times, serif;
     padding: 4px 10px;
     margin-left: -90px;
@@ -16,7 +16,7 @@
 .small-title .la-check-square {
     position: relative;
     font-size: 28px;
-    color: $small_input_button;
+    color: $silver;
     margin-left: 870px;
     top: -34px;
 }
@@ -24,7 +24,7 @@
 .small-title .la-paint-brush {
     position: relative;
     font-size: 28px;
-    color: $small_input_button;
+    color: $silver;
     margin-left: 920px;
     top: -63px;
 }
@@ -32,7 +32,7 @@
 .small-title .la-image {
     position: relative;
     font-size: 28px;
-    color: $small_input_button;
+    color: $silver;
     margin-left: 970px;
     top: -90px;
 }
@@ -53,7 +53,7 @@
 form {
     width: 620px;
     height: 150px;
-    box-shadow: 5px 5px 10px $input_box_shadow;
+    box-shadow: 5px 5px 10px $beige;
     margin-top: -70px;
     margin-left: 20px;
     padding: 10px;
