@@ -66,5 +66,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/SCSS/Createnote.scss";
+@import "@/scss/Createnote.scss";
 </style>
