@@ -8,6 +8,7 @@ import Dashboard from './components/pages/Dashboard.vue'
 import Createnote from './components/pages/Createnote.vue'
 import Getnote from './components/pages/Getnote.vue'
 import Updatenote from './components/pages/Updatenote.vue'
+import Icon from './components/pages/Icon.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -29,6 +30,10 @@ export default new Router({
             },
             {   path:'/updatenote',
                 component: Updatenote
+            },
+            {
+                path:'/deletenote',
+                component: Icon
             }
         ]
         },
