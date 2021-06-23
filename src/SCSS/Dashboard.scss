@@ -15,7 +15,7 @@ header {
 input[type="search"] {
     width: 700px;
     height: 50px;
-    background-color: $search_button;
+    background-color: $offwhite;
     border: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -29,7 +29,7 @@ input[type="search"] {
 .logo-brand {
     margin-left: 18px;
     line-height: 36px;
-    color: $logo_brand;
+    color: $grey;
     font-size: 23px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
@@ -99,7 +99,7 @@ input[type="search"] {
 hr {
     margin-bottom: 1rem;
     margin-top: 0.5rem;
-    background-color: $hr;
+    background-color: $hrgrey;
 }
 
 .sidebar-menu .active{
