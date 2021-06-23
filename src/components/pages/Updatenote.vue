@@ -54,5 +54,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/SCSS/Updatenote.scss";
+@import "@/scss/Updatenote.scss";
 </style>
