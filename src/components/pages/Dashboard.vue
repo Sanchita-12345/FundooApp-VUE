@@ -63,5 +63,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/SCSS/Dashboard.scss";
+@import "@/scss/Dashboard.scss";
 </style>
