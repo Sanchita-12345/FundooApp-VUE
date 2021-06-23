@@ -53,5 +53,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/SCSS/Reset.scss";
+@import "@/scss/Reset.scss";
 </style>
