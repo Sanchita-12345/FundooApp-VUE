@@ -39,5 +39,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/SCSS/Forgot.scss";
+@import "@/scss/Forgot.scss";
 </style>
