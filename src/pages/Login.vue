@@ -41,5 +41,5 @@ export default {
 
 <style scoped lang="scss">
 
-@import "@/SCSS/Login.scss";
+@import "@/scss/Login.scss";
 </style>
